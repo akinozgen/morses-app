@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		992B7FD3254C74DD00B68724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992B7FD2254C74DD00B68724 /* Assets.xcassets */; };
 		992B7FD6254C74DD00B68724 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992B7FD5254C74DD00B68724 /* Preview Assets.xcassets */; };
 		992B7FD9254C74DE00B68724 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992B7FD7254C74DE00B68724 /* LaunchScreen.storyboard */; };
+		992B7FE3254C754300B68724 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 992B7FE2254C754300B68724 /* SwiftSpeech */; };
+		992B7FE6254CA45800B68724 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992B7FE5254CA45800B68724 /* SpeechRecognizer.swift */; };
+		99A754F0254EBD7F003C55E1 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A754EF254EBD7F003C55E1 /* OnboardingDataModel.swift */; };
+		99A754F4254EBF39003C55E1 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A754F3254EBF39003C55E1 /* OnboardingStepView.swift */; };
+		99A754F7254EC069003C55E1 /* OnboardingViewPure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A754F6254EC069003C55E1 /* OnboardingViewPure.swift */; };
+		99A754FB254ED924003C55E1 /* TextToMorseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A754FA254ED924003C55E1 /* TextToMorseView.swift */; };
+		99A75505254EE289003C55E1 /* MorseToTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A75504254EE289003C55E1 /* MorseToTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,12 @@
 		992B7FD5254C74DD00B68724 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		992B7FD8254C74DE00B68724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		992B7FDA254C74DE00B68724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		992B7FE5254CA45800B68724 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		99A754EF254EBD7F003C55E1 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		99A754F3254EBF39003C55E1 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
+		99A754F6254EC069003C55E1 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
+		99A754FA254ED924003C55E1 /* TextToMorseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToMorseView.swift; sourceTree = "<group>"; };
+		99A75504254EE289003C55E1 /* MorseToTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseToTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992B7FE3254C754300B68724 /* SwiftSpeech in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +70,13 @@
 		992B7FCB254C74DC00B68724 /* Test 3 */ = {
 			isa = PBXGroup;
 			children = (
+				99A754FE254EE25B003C55E1 /* MorseToText */,
+				99A754F9254ED916003C55E1 /* TextToMorse */,
+				99A754EE254EBD6E003C55E1 /* Onboarding */,
 				992B7FCC254C74DC00B68724 /* AppDelegate.swift */,
 				992B7FCE254C74DC00B68724 /* SceneDelegate.swift */,
 				992B7FD0254C74DC00B68724 /* ContentView.swift */,
+				992B7FE5254CA45800B68724 /* SpeechRecognizer.swift */,
 				992B7FD2254C74DD00B68724 /* Assets.xcassets */,
 				992B7FD7254C74DE00B68724 /* LaunchScreen.storyboard */,
 				992B7FDA254C74DE00B68724 /* Info.plist */,
@@ -73,6 +91,32 @@
 				992B7FD5254C74DD00B68724 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99A754EE254EBD6E003C55E1 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				99A754EF254EBD7F003C55E1 /* OnboardingDataModel.swift */,
+				99A754F3254EBF39003C55E1 /* OnboardingStepView.swift */,
+				99A754F6254EC069003C55E1 /* OnboardingViewPure.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		99A754F9254ED916003C55E1 /* TextToMorse */ = {
+			isa = PBXGroup;
+			children = (
+				99A754FA254ED924003C55E1 /* TextToMorseView.swift */,
+			);
+			path = TextToMorse;
+			sourceTree = "<group>";
+		};
+		99A754FE254EE25B003C55E1 /* MorseToText */ = {
+			isa = PBXGroup;
+			children = (
+				99A75504254EE289003C55E1 /* MorseToTextView.swift */,
+			);
+			path = MorseToText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +135,9 @@
 			dependencies = (
 			);
 			name = "Test 3";
+			packageProductDependencies = (
+				992B7FE2254C754300B68724 /* SwiftSpeech */,
+			);
 			productName = "Test 3";
 			productReference = 992B7FC9254C74DC00B68724 /* Test 3.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +165,9 @@
 				Base,
 			);
 			mainGroup = 992B7FC0254C74DC00B68724;
+			packageReferences = (
+				992B7FE1254C754300B68724 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
+			);
 			productRefGroup = 992B7FCA254C74DC00B68724 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,8 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A754F7254EC069003C55E1 /* OnboardingViewPure.swift in Sources */,
+				99A75505254EE289003C55E1 /* MorseToTextView.swift in Sources */,
+				99A754FB254ED924003C55E1 /* TextToMorseView.swift in Sources */,
 				992B7FCD254C74DC00B68724 /* AppDelegate.swift in Sources */,
+				992B7FE6254CA45800B68724 /* SpeechRecognizer.swift in Sources */,
 				992B7FCF254C74DC00B68724 /* SceneDelegate.swift in Sources */,
+				99A754F4254EBF39003C55E1 /* OnboardingStepView.swift in Sources */,
+				99A754F0254EBD7F003C55E1 /* OnboardingDataModel.swift in Sources */,
 				992B7FD1254C74DC00B68724 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		992B7FE1254C754300B68724 /* XCRemoteSwiftPackageReference "SwiftSpeech" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cay-Zhang/SwiftSpeech.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		992B7FE2254C754300B68724 /* SwiftSpeech */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 992B7FE1254C754300B68724 /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
+			productName = SwiftSpeech;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 992B7FC1254C74DC00B68724 /* Project object */;
 }

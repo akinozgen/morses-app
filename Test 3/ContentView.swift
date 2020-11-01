@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    var data = OnboardingDataModel.data
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            OnboardingViewPure(data: data, doneFunction: {
+                print("onboarding done.")
+            })
+        }.navigationBarBackButtonHidden(true)
     }
+    
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
