@@ -36,6 +36,7 @@ extension Color {
 
 struct OnboardingStepView: View {
     var data: OnboardingDataModel
+    var routes: [Any]
     
     var body: some View {
         VStack(alignment: .center) {
@@ -61,7 +62,7 @@ struct OnboardingStepView: View {
                         .cornerRadius(8)
                         .foregroundColor(Color(hex: data.color))
                         .font(.system(size: 18, design: .rounded))
-                }.navigationBarBackButtonHidden(true)
+                }
                 
                 
             }
@@ -88,11 +89,11 @@ struct OnboardingStepView: View {
         Group {
             switch title {
                 case "speechrecognizer":
-                    SpeechRecognizer().navigationBarBackButtonHidden(true)
+                    AnyView(_fromValue: self.routes[0])
                 case "texttomorse":
-                    TextToMorseView().navigationBarBackButtonHidden(true)
+                    AnyView(_fromValue: self.routes[1])
                 case "morsetotext":
-                    MorseToTexView().navigationBarBackButtonHidden(true)
+                    AnyView(_fromValue: self.routes[2])
                 default:
                     Text("Default")
             }
@@ -103,6 +104,6 @@ struct OnboardingStepView: View {
 struct OnboardingStepView_Previews: PreviewProvider {
     static var data = OnboardingDataModel.data[0]
     static var previews: some View {
-        OnboardingStepView(data: data)
+        OnboardingStepView(data: data, routes: [])
     }
 }

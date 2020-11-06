@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingViewPure: View {
     var data: [OnboardingDataModel]
+    var routes: [Any]
     var doneFunction: () -> ()
     
     @State var slideGesture: CGSize = CGSize.zero
@@ -69,7 +70,7 @@ struct OnboardingViewPure: View {
             
             ZStack (alignment: .center) {
                 ForEach(0..<self.data.count) { i in
-                    OnboardingStepView(data: self.data[i])
+                    OnboardingStepView(data: self.data[i], routes: self.routes)
                         .offset(x: CGFloat(i) * self.distance)
                         .offset(x: self.slideGesture.width - CGFloat(self.curSlideIndex) * self.distance)
                         .animation(.spring())
@@ -114,6 +115,6 @@ struct OnboardingViewPure: View {
 struct OnboardingViewPure_Previews: PreviewProvider {
     static let sample = OnboardingDataModel.data
     static var previews: some View {
-        OnboardingViewPure(data: sample, doneFunction: { print("done") })
+        OnboardingViewPure(data: sample, routes: [], doneFunction: { print("done") })
     }
 }

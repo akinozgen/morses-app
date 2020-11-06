@@ -10,6 +10,7 @@ import SwiftUI
 struct MorseToTexView: View {
     @State var resultText = "Type something";
     @State var inputText = "- -.-- .--. . / ... --- -- . - .... .. -. --."
+    var home: Any
     
     var body: some View {
         VStack {
@@ -20,33 +21,21 @@ struct MorseToTexView: View {
                     .multilineTextAlignment(.leading)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             }
-            .background(Color.black.opacity(0.42))
+            .background(Color.white.opacity(0.2))
             .cornerRadius(8)
             .padding()
             .multilineTextAlignment(.leading)
-            .foregroundColor(Color(hex: "#CBED6F").opacity(0.85))
+            .foregroundColor(Color.white.opacity(0.85))
             // Input Area Ends
             
             // Convert and bakc Button Starts
-            HStack {
-                NavigationLink(destination: ContentView()) {
-                    Text("Back")
-                        .foregroundColor(Color.white.opacity(0.6))
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: .center)
-                        .padding(.vertical, 10)
-                        .background(Color.white.opacity(0.2))
-                        .cornerRadius(8)
-                        .padding(.leading, 15)
-                }.navigationBarBackButtonHidden(true)
-                
-                Button("Convert", action: {})
-                    .foregroundColor(Color.black.opacity(0.6))
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: .center)
-                    .padding(.vertical, 10)
-                    .background(Color.black.opacity(0.2))
-                    .cornerRadius(8)
-                    .padding(.trailing, 15)
-            }
+            Button("Convert", action: {})
+                .foregroundColor(Color.black)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 20, alignment: .center)
+                .padding(.vertical, 10)
+                .background(Color.white)
+                .cornerRadius(8)
+                .padding(.horizontal, 15)
             // Convert and back Button Ends
             
             // Result Area Starts
@@ -56,10 +45,12 @@ struct MorseToTexView: View {
                         .padding()
                         .multilineTextAlignment(.leading)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                        .foregroundColor(Color.white.opacity(0.8))
                     Divider()
-                        .background(Color(hex: "#CBED6F"))
+                        .background(Color.white.opacity(0.2))
                         .padding(.horizontal, 5)
                     Button("Share", action: {})
+                        .foregroundColor(Color.white)
                         .padding(.vertical, 10)
                 }
             }
@@ -71,16 +62,15 @@ struct MorseToTexView: View {
 
             // Result Area Ends
         }
-        .padding(.top, 15)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
-        .background(Color(hex: "#91C602"))
-        .ignoresSafeArea(SafeAreaRegions.all, edges: .all)
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.top)
     }
     
 }
 
 struct MorseToTexView_Previews: PreviewProvider {
     static var previews: some View {
-        MorseToTexView()
+        MorseToTexView(home: EmptyView())
     }
 }

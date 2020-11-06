@@ -11,11 +11,7 @@ struct ContentView: View {
     var data = OnboardingDataModel.data
     
     var body: some View {
-        NavigationView {
-            OnboardingViewPure(data: data, doneFunction: {
-                print("onboarding done.")
-            })
-        }.navigationBarBackButtonHidden(true)
+        HomeViewTabbed()
     }
     
 }
