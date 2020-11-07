@@ -33,7 +33,7 @@ struct HomeViewTabbed: View {
                         Text("Speech to Morse")
                     }
                 }
-            MorseToLightView()
+            MorseToLightView(morse: "")
                 .tabItem {
                     Image(systemName: "flashlight.on.fill")
                     Text("Morse to Flash")
