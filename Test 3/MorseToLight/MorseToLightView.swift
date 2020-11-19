@@ -9,16 +9,52 @@ import SwiftUI
 import AVKit
 
 struct MorseToLightView: View {
-    @State var morse: String
+    @State var morse: String = ".../---/..."
     
     var body: some View {
         VStack {
-            TextField("Input (in Morse)", text: $morse)
+            // Input Area Starts
+            Group {
+                TextField(morse, text: $morse)
+                    .padding()
+                    .multilineTextAlignment(.leading)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
+            .background(Color.white.opacity(0.2))
+            .cornerRadius(8)
+            .padding()
+            .multilineTextAlignment(.leading)
+            .foregroundColor(Color.white.opacity(0.85))
+            // Input Area Ends
             
-            Button("Light'em up", action: {
-                blink(text: morse)
-            })
+            // Result Area Starts
+            Group {
+                Button(action:  {
+                    blink(text: morse)
+                }) {
+                    Image(systemName: "flashlight.on.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.all, 25)
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 100)
+                        .background(Color.black.opacity(0.4))
+                        .cornerRadius(100)
+                        .shadow(radius: 6)
+                }
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .background(Color.white.opacity(0.3))
+            .cornerRadius(8)
+            .padding()
+            .multilineTextAlignment(.leading)
+            .foregroundColor(Color(hex: "#1B0330"))
+
+            // Result Area Ends
         }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.top)
     }
     
     func blink(text: String = "") {
@@ -83,6 +119,6 @@ struct MorseToLightView: View {
 
 struct MorseToLightView_Previews: PreviewProvider {
     static var previews: some View {
-        MorseToLightView(morse: "")
+        MorseToLightView(morse: ".../---/...")
     }
 }

@@ -19,8 +19,9 @@ struct TextToMorseView: View {
                 TextField(inputText, text: $inputText)
                     .padding()
                     .multilineTextAlignment(.leading)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                
             }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
             .background(Color.white.opacity(0.2))
             .cornerRadius(8)
             .padding()
@@ -44,8 +45,8 @@ struct TextToMorseView: View {
                     TextField(resultText, text: $resultText)
                         .padding()
                         .multilineTextAlignment(.leading)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                         .foregroundColor(Color.white.opacity(0.8))
+                    Spacer()
                     Divider()
                         .background(Color.white.opacity(0.2))
                         .padding(.horizontal, 5)
@@ -54,6 +55,7 @@ struct TextToMorseView: View {
                         .foregroundColor(Color.white)
                 }
             }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.top)
             .background(Color.white.opacity(0.3))
             .cornerRadius(8)
             .padding()

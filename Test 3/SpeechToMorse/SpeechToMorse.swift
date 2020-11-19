@@ -90,8 +90,8 @@ struct SpeechToMorse: View {
                     TextField(text, text: $text)
                         .padding()
                         .multilineTextAlignment(.leading)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                         .foregroundColor(Color.white.opacity(0.8))
+                    Spacer()
                     Divider()
                         .background(Color.white.opacity(0.2))
                         .padding(.horizontal, 5)
@@ -100,6 +100,7 @@ struct SpeechToMorse: View {
                         .padding(.vertical, 10)
                 }
             }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.top)
             .background(Color.white.opacity(0.3))
             .cornerRadius(8)
             .padding()

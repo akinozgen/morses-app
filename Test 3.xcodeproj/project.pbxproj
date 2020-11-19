@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990605A1256597FD007440BE /* MorseLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990605A0256597FD007440BE /* MorseLib.swift */; };
 		990EA1852552D72F00193C50 /* SpeechToMorse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990EA1842552D72F00193C50 /* SpeechToMorse.swift */; };
 		992B7FCD254C74DC00B68724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992B7FCC254C74DC00B68724 /* AppDelegate.swift */; };
 		992B7FCF254C74DC00B68724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992B7FCE254C74DC00B68724 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		990605A0256597FD007440BE /* MorseLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseLib.swift; sourceTree = "<group>"; };
 		990EA1842552D72F00193C50 /* SpeechToMorse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToMorse.swift; sourceTree = "<group>"; };
 		992B7FC9254C74DC00B68724 /* Test 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992B7FCC254C74DC00B68724 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				992B7FDA254C74DE00B68724 /* Info.plist */,
 				992B7FCA254C74DC00B68724 /* Products */,
 				992B7FD4254C74DD00B68724 /* Preview Content */,
+				990605A0256597FD007440BE /* MorseLib.swift */,
 			);
 			path = "Test 3";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				99A754F7254EC069003C55E1 /* OnboardingViewPure.swift in Sources */,
 				99A75505254EE289003C55E1 /* MorseToTextView.swift in Sources */,
+				990605A1256597FD007440BE /* MorseLib.swift in Sources */,
 				99A754FB254ED924003C55E1 /* TextToMorseView.swift in Sources */,
 				992B7FCD254C74DC00B68724 /* AppDelegate.swift in Sources */,
 				992B7FCF254C74DC00B68724 /* SceneDelegate.swift in Sources */,
